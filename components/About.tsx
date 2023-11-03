@@ -1,4 +1,4 @@
-import { getData } from "@/app/page";
+import { getData } from "@/components/getData";
 import { urlFor } from "@/sanity";
 import { PageInfo } from "@/typings";
 import { motion } from "framer-motion";

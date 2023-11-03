@@ -10,14 +10,6 @@ import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 import WorkExperience from '@/components/WorkExperience';
 
-import { Experience, PageInfo, Project, Skill, Social } from '@/typings';
-import { fetchExperience } from '@/utils/fetchExperience';
-import { fetchPageInfo } from '@/utils/fetchPageInfo';
-import { fetchProjects} from '@/utils/fetchProjects';
-import { fetchSkills } from '@/utils/fetchSkills';
-import { fetchSocials } from '@/utils/fetchSocials';
-import pageInfo from '@/sanity/schemas/pageInfo';
-import social from '@/sanity/schemas/social';
 
 export default function Home() {
 
@@ -50,28 +42,16 @@ export default function Home() {
       <Link href="#hero">
         <footer className='sticky bottom-5 w-full cursor-pointer'>
           <div className='flex items-center justify-center'>
-            <img
-              className='w-10 h-10 rounded-full filter grayscale hover:grayscale-0'
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5Kb6giEARrYkyZZdH8p_X_x0Pl0mAjJcPDw&usqp=CAU"
-              alt="up"
-            />
+            <picture>
+              <img
+                className='w-10 h-10 rounded-full filter grayscale hover:grayscale-0'
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5Kb6giEARrYkyZZdH8p_X_x0Pl0mAjJcPDw&usqp=CAU"
+                alt="up"
+              />
+            </picture>
           </div>
         </footer>
       </Link>
     </div>
   );
-}
-
-export async function getData() {
-  const socials = await fetchSocials();
-  const pageInfo = await fetchPageInfo();
-  const experiences = await fetchExperience();
-  const skills = await fetchSkills();
-
-  return {
-    socials,
-    pageInfo,
-    experiences,
-    skills
-  };
 }

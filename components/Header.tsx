@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {motion} from 'framer-motion';
 import { SocialIcon } from 'react-social-icons';
 import { Social } from '@/typings';
-import { getData } from '@/app/page';
+import { getData } from '@/components/getData';
 
 export default function Header() {
   const [socials, setSocials] = useState<Social[] | null>(null);

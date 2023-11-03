@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Skill from './Skill';
-import { getData } from '@/app/page';
 import { Skill as SkillType } from '@/typings';
 
 export default function Skills() {
@@ -32,11 +31,11 @@ export default function Skills() {
 
       <div className='grid grid-cols-4 gap-5'>
         {skills && skills.slice(0, skills.length / 2).map(skill => (
-          <Skill key={skill._id} skillData={skill} />
+          <Skill key={skill._id} skill={skill} />
         ))}
 
         {skills && skills.slice(skills.length / 2, skills.length).map(skill => (
-          <Skill key={skill._id} skillData={skill} directionaLeft/>
+          <Skill key={skill._id} skill={skill} directionaLeft/>
         ))}
       </div>
     </motion.div>

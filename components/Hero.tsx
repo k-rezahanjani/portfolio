@@ -4,7 +4,7 @@ import { Cursor ,useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircle from './BackgroundCircle';
 import Link from 'next/link';
 import { PageInfo } from '@/typings';
-import { getData } from '@/app/page';
+import { getData } from '@/components/getData';
 import { urlFor } from '@/sanity';
 
 
@@ -45,12 +45,16 @@ export default function Hero() {
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
         <BackgroundCircle />
-        {pageInfo?.heroImage &&
-        <img 
-            className='relative rounded-full h-32 w-32 mx-auto object-cover'
-            src={urlFor(pageInfo.heroImage).url()}
-            alt="me"
-        />}
+        {
+          pageInfo?.heroImage &&
+          <picture>
+            <img 
+                className='relative rounded-full h-32 w-32 mx-auto object-cover'
+                src={urlFor(pageInfo.heroImage).url()}
+                alt="me"
+            />
+          </picture>
+        }
         <div className='z-20'>
             <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>{pageInfo?.role}</h2>
             <h1>
