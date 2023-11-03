@@ -4,10 +4,10 @@ import {schemaTypes} from "../portfolio/sanity/schemas/index";
 
 
 const config =  defineConfig({
-    projectId: 'p0ipwu50',
+    projectId: 'rl5a80u6',
     dataset: 'production',
     title: 'My Personal Portfolio',
-    apiVersion: '2023-05-04',
+    apiVersion: '2021-03-25',
     basePath: '/admin',
     plugins: [deskTool()],
     schema: {types: schemaTypes}
