@@ -2,12 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { urlFor } from '@/sanity';
 import { Image } from 'sanity';
+import { Skill } from '@/typings';
 
 type SkillProps = {
-  skill: {
-    title: string;
-    image: Image;
-  };
+  skill: Skill
 };
 
 export default function Skill({ skill }: SkillProps) {

@@ -5,7 +5,7 @@ import { Skill as SkillType } from '@/typings';
 
 export default function Skills() {
   const [skills, setSkills] = useState<SkillType[] | null>(null);
-  const [loading, setLoading] = useState(true); // Set loading to true initially
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch('http://localhost:3000/api/getSkill')
@@ -30,12 +30,8 @@ export default function Skills() {
       {/* <h3 className='absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm'>Hover over a skill for current proficiency</h3> */}
 
       <div className='grid grid-cols-4 gap-5'>
-        {skills && skills.slice(0, skills.length / 2).map(skill => (
+        {skills && skills?.map(skill => (
           <Skill key={skill._id} skill={skill} />
-        ))}
-
-        {skills && skills.slice(skills.length / 2, skills.length).map(skill => (
-          <Skill key={skill._id} skill={skill} directionaLeft/>
         ))}
       </div>
     </motion.div>

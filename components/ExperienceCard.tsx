@@ -2,19 +2,9 @@ import React from 'react'
 import { motion } from "framer-motion";
 import { Experience, Technology } from '@/typings';
 import { urlFor } from '@/sanity';
-import { Image } from 'sanity';
 
 type Props = {
-    experience: {
-        company: string;
-        companyImage: Image;
-        dateStarted: Date;
-        dateEnded: Date;
-        isCurrentlyWorkingHere: boolean;
-        jobTitle: string;
-        points: string[];
-        technologies: Technology[];
-    }
+    experience: Experience
 }
 
 export default function ExperienceCard({ experience }: Props) {

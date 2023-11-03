@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { motion } from "framer-motion";
 import ExperienceCard from './ExperienceCard';
 import { Experience } from '@/typings';
-import { getData } from '@/app/page';
 
 export default function WorkExperience() {
   const [experiences, setExperiences] = useState<Experience[] | null>(null)
