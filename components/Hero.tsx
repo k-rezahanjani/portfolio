@@ -4,7 +4,7 @@ import { Cursor ,useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircle from './BackgroundCircle';
 import Link from 'next/link';
 import { PageInfo } from '@/typings';
-import { getData } from '@/components/getData';
+import { getStaticProps } from '@/components/getData';
 import { urlFor } from '@/sanity';
 
 
@@ -15,10 +15,10 @@ export default function Hero() {
     useEffect(() => {
         async function fetchData() {
           try {
-            const data = await getData();
+            const data = await getStaticProps();
     
-            if (data.pageInfo) {
-              setPageInfo(data.pageInfo);
+            if (data.props.pageInfo) {
+              setPageInfo(data.props.pageInfo);
             }
     
             setLoading(false);

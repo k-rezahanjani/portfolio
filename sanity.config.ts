@@ -9,7 +9,7 @@ const config =  defineConfig({
     dataset: 'production',
     title: 'My Personal Portfolio',
     apiVersion: '2021-03-25',
-    basePath: '/admin',
+    basePath: '/studio',
     plugins: [deskTool(), vercelDeployTool()],
     schema: {types: schemaTypes}
   })
