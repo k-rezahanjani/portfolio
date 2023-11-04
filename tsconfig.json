@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "sanity/schemas/social.js", "sanity/schemas/skill.js", "sanity/schemas/project.js", "sanity/schemas/pageInfo.js", "components/Contact.jsx", "components/BackgroundCircle.jsx", "components/About.jsx", "app/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "sanity/schemas/social.js", "sanity/schemas/skill.js", "sanity/schemas/project.js", "sanity/schemas/pageInfo.js"],
   "exclude": ["node_modules"]
 }

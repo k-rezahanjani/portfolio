@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {motion} from 'framer-motion';
 import { SocialIcon } from 'react-social-icons';
 import { Social } from '@/typings';
-import { getStaticProps } from '@/components/getData';
+import { getData } from '@/components/getData';
 
 export default function Header() {
   const [socials, setSocials] = useState<Social[] | null>(null);
@@ -10,8 +10,8 @@ export default function Header() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const data = await getStaticProps();
-        setSocials(data.props.socials);
+        const data = await getData();
+        setSocials(data.socials);
       } catch (error) {
         console.error('Error fetching socials:', error);
       }

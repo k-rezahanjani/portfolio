@@ -1,4 +1,4 @@
-import { getStaticProps } from "@/components/getData";
+import { getData } from "@/components/getData";
 import { urlFor } from "@/sanity";
 import { PageInfo } from "@/typings";
 import { motion } from "framer-motion";
@@ -11,10 +11,10 @@ export default function About() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const data = await getStaticProps();
+        const data = await getData();
 
-        if (data.props.pageInfo) {
-          setPageInfo(data.props.pageInfo);
+        if (data.pageInfo) {
+          setPageInfo(data.pageInfo);
         }
 
         setLoading(false);
