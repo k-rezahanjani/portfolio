@@ -3,7 +3,7 @@ import { cache } from "react";
 
 export const fetchSocials = async () => {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getSocials`);
+      const res = await fetch(`https://cv-theta-jade.vercel.app/api/getSocials`);
       if (!res.ok) {
         throw new Error(`Failed to fetch social data: ${res.status}`);
       }

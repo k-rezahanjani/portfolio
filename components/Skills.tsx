@@ -8,7 +8,7 @@ export default function Skills() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getSkill`)
+    fetch(`https://cv-theta-jade.vercel.app/api/getSkill`)
     .then((res) => res.json())
     .then((data) => {
       if(data.skills) {
