@@ -7,7 +7,7 @@ export default function WorkExperience() {
   const [experiences, setExperiences] = useState<Experience[] | null>(null)
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/getExperience')
+    fetch('https://portfolio-l1q056gfi-kavehs-projects-60798897.vercel.app/api/getExperience')
       .then(res => res.json())
       .then(data => {
         if(data.experiences) {

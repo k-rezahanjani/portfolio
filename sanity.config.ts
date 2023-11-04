@@ -1,6 +1,7 @@
 import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 import {schemaTypes} from "./sanity/schemas";
+import { vercelDeployTool } from "sanity-plugin-vercel-deploy";
 
 
 const config =  defineConfig({
@@ -9,7 +10,7 @@ const config =  defineConfig({
     title: 'My Personal Portfolio',
     apiVersion: '2021-03-25',
     basePath: '/admin',
-    plugins: [deskTool()],
+    plugins: [deskTool(), vercelDeployTool()],
     schema: {types: schemaTypes}
   })
 

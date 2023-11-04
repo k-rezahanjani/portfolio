@@ -8,7 +8,7 @@ export default function Skills() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/getSkill')
+    fetch('https://portfolio-l1q056gfi-kavehs-projects-60798897.vercel.app/api/getSkill')
     .then((res) => res.json())
     .then((data) => {
       if(data.skills) {
