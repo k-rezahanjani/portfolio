@@ -16,7 +16,7 @@ export default function Skills() {
       }
     })
     
-  }, []);
+  }, [skills]);
 
   return (
     <motion.div

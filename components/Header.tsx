@@ -3,6 +3,7 @@ import {motion} from 'framer-motion';
 import { SocialIcon } from 'react-social-icons';
 import { Social } from '@/typings';
 import { getData } from '@/components/getData';
+import Link from 'next/link';
 
 export default function Header() {
   const [socials, setSocials] = useState<Social[] | null>(null);

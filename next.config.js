@@ -4,6 +4,4 @@ const nextConfig = {
     publicRuntimeConfig: {},
 }
 
-module.exports = {
-    nextConfig
-}
+module.exports = nextConfig

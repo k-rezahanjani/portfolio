@@ -9,14 +9,14 @@ type Props = {
 
 export default function ExperienceCard({ experience }: Props) {
   return (
-    <article className='flex flex-col rounded-lg items-center space-y-3 flex-shrink-0 w-[550px] h-[670px] md:w-[600px] xl:w-[500px] snap-center bg-[#292929] p-2
-    hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden mt-52'>
+    <article className='flex flex-col rounded-lg items-center space-y-3 flex-shrink-0 w-[450px] h-[670px] lg:w-[450px] md:w-[450px] xl:w-[450px] snap-center bg-[#292929] pt-2
+    hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden mt-[220px] px-4'>
         <motion.img 
             initial={{y: -100, opacity: 0,}}
             transition={{duration: 1.2}}
             whileInView={{opacity: 1, y:0}}
             viewport={{once: true}}
-            className='w-24 h-24 rounded-full xl:w-32 xl:h-32 object-cover object-top'
+            className='w-24 h-24 rounded-full xl:w-24 xl:h-24 object-cover object-top'
             src={urlFor(experience.companyImage).url()}
         />
         <div className='px-0 md:px-10'>
@@ -38,7 +38,7 @@ export default function ExperienceCard({ experience }: Props) {
             <p className='uppercase py-5 text-gray-300'>
                 {new Date(experience.dateStarted).toDateString()} - {""} {experience.isCurrentlyWorkingHere ? 'Present' : new Date(experience.dateEnded).toDateString()}
             </p>
-            <ul className='list-disc space-y-4 ml-5 text-sm text-justify'>
+            <ul className='list-disc space-y-4 ml-5 text-sm'>
                 {
                     experience.points.map((point, i) => (
                         <li key={i}>{point}</li>
