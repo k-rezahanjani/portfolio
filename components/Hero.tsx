@@ -35,8 +35,8 @@ export default function Hero() {
     const [text, count] = useTypewriter({
         words: [
             pageInfo ? `Hi, I'm ${pageInfo?.name}` : "Loading...",
-            "Guy-who-loves-coding.jsx",
-            "<ButLovesToCodeMore />"
+            pageInfo?.passion ? `${pageInfo?.passion}` : 'Love Code',
+            pageInfo?.interest ? `${pageInfo?.interest}` : "<EagerToLearnMore />"
         ],
         loop: true,
         delaySpeed: 2000,
@@ -58,7 +58,7 @@ export default function Hero() {
         <div className='z-20'>
             <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>{pageInfo?.role}</h2>
             <h1>
-                <span className='text-3xl lg:text-6xl font-semibold px-10'>{text}</span>
+                <span className='text-3xl lg:text-6xl font-semibold px-10 max-sm:text-3xl'>{text}</span>
                 <Cursor cursorColor='orange'/>
             </h1>
             <div className='pt-5'>

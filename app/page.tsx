@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 import About from '@/components/About';
@@ -40,8 +40,8 @@ export default function Home() {
         <Contact />
       </section>
       <Link href="#hero">
-        <footer className='sticky bottom-5 w-full cursor-pointer'>
-          <div className='flex items-center justify-end me-4'>
+        <footer className='sticky bottom-24 w-full cursor-pointer'>
+          <div className='flex items-center justify-end me-10'>
             <picture>
               <img
                 className='w-10 h-10 rounded-full filter grayscale hover:grayscale-0'

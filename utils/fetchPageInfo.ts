@@ -7,3 +7,5 @@ export const fetchPageInfo =async () => {
 
     return pageInfo;
 }
+
+// https://cv-theta-jade.vercel.app

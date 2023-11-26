@@ -43,8 +43,8 @@ export default function Contact() {
                     <p className='text-2xl'>123 Developer lane</p>
                 </div>
             </div>
-            <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto max-sm:w-[536px]'>
-                <div className='flex space-x-2'>
+            <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto max-sm:w-[436px]'>
+                <div className='flex space-x-2 max-sm:flex-col max-sm:space-x-0 max-sm:space-y-2'>
                     <input {...register('name')} placeholder='Name' className='contactInput' type="text" />
                     <input {...register('email')} placeholder='Email' className='contactInput' type="email" />
                 </div>

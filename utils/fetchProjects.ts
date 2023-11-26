@@ -7,4 +7,3 @@ export const fetchProjects =async () => {
 
     return project;
 }
-// https://cv-theta-jade.vercel.app

@@ -1,3 +1,5 @@
+import { defineField } from "sanity";
+
 export default {
   name: 'pageInfo',
   title: 'PageInfo',
@@ -13,6 +15,16 @@ export default {
       title: 'Role',
       type: 'string',
     },
+    defineField({
+      name: 'passion',
+      title: 'Passion',
+      type: 'string',
+    }),
+    defineField({
+      name: 'interest',
+      title: 'Interest',
+      type: 'string',
+    }),
     {
       name: 'heroImage',
       title: 'Image',
