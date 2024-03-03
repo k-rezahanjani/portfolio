@@ -8,7 +8,7 @@ export default function Skills() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://cv-theta-jade.vercel.app/api/getSkill`)
+    fetch(`http://www.kavehrh.site/api/getSkill`)
     .then((res) => res.json())
     .then((data) => {
       if(data.skills) {

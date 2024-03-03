@@ -7,7 +7,7 @@ export default function WorkExperience() {
   const [experiences, setExperiences] = useState<Experience[] | null>(null)
 
   useEffect(() => {
-    fetch(`https://cv-theta-jade.vercel.app/api/getExperience`)
+    fetch(`http://www.kavehrh.site/api/getExperience`)
       .then(res => res.json())
       .then(data => {
         if(data.experiences) {
