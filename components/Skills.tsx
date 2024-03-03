@@ -8,11 +8,12 @@ export default function Skills() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://cv-theta-jade.vercel.app/api/getSkill`)
+    fetch(`https://www.kavehrh.site/api/getSkill`)
     .then((res) => res.json())
     .then((data) => {
       if(data.skills) {
         setSkills(data.skills);
+        setLoading(false);
       }
     })
     
@@ -27,6 +28,7 @@ export default function Skills() {
       >
       <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Skills</h3>
       <div className='grid grid-cols-4 gap-5'>
+        {loading && <p className='animate-ping'>Loading...</p>}
         {skills && skills?.map(skill => (
           <Skill key={skill._id} skill={skill} />
         ))}
