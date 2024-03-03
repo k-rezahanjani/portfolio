@@ -3,7 +3,7 @@ import { cache } from "react";
 
 export const fetchSocials = async () => {
     try {
-      const res = await fetch(`http://www.kavehrh.site/api/getSocials`);
+      const res = await fetch(`http://kavehrh.site/api/getSocials`);
       if (!res.ok) {
         throw new Error(`Failed to fetch social data: ${res.status}`);
       }

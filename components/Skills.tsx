@@ -8,7 +8,7 @@ export default function Skills() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://www.kavehrh.site/api/getSkill`)
+    fetch(`http://kavehrh.site/api/getSkill`)
     .then((res) => res.json())
     .then((data) => {
       if(data.skills) {

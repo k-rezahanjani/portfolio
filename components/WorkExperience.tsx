@@ -7,7 +7,7 @@ export default function WorkExperience() {
   const [experiences, setExperiences] = useState<Experience[] | null>(null)
 
   useEffect(() => {
-    fetch(`http://www.kavehrh.site/api/getExperience`)
+    fetch(`http://kavehrh.site/api/getExperience`)
       .then(res => res.json())
       .then(data => {
         if(data.experiences) {

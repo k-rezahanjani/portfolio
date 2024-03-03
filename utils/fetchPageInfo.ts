@@ -1,7 +1,7 @@
 import { PageInfo } from "@/typings";
 
 export const fetchPageInfo =async () => {
-    const res = await fetch(`http://www.kavehrh.site/api/getPageInfo`);
+    const res = await fetch(`http://kavehrh.site/api/getPageInfo`);
     const data = await res.json();
     const pageInfo: PageInfo = data.pageInfo;
 
